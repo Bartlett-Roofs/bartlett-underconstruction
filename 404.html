@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Bartlett Roofing</title>
+    <meta name="description" content="The page you're looking for doesn't exist. Contact Bartlett Roofing for residential and commercial roofing services in CA, GA, ID, UT, and WA.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --teal: #4dbea2;
+            --teal-light: #6fcfb5;
+            --teal-dark: #3a9a82;
+            --charcoal: #303030;
+            --dark: #283442;
+            --darker: #1a232d;
+            --cream: #f8f6f3;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--cream);
+            min-height: 100vh;
+            color: var(--charcoal);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero {
+            background: var(--dark);
+            position: relative;
+            overflow: hidden;
+            padding: 60px 20px 100px;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                linear-gradient(135deg, transparent 49.5%, var(--teal) 49.5%, var(--teal) 50.5%, transparent 50.5%),
+                linear-gradient(-135deg, transparent 49.5%, rgba(77, 190, 162, 0.3) 49.5%, rgba(77, 190, 162, 0.3) 50.5%, transparent 50.5%);
+            background-size: 60px 60px;
+            opacity: 0.15;
+            animation: patternShift 20s linear infinite;
+        }
+
+        @keyframes patternShift {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(60px); }
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background: var(--dark);
+            clip-path: polygon(0 100%, 100% 100%, 100% 0, 50% 60%, 0 0);
+            opacity: 0.3;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .logo {
+            max-width: 240px;
+            height: auto;
+            margin-bottom: 48px;
+            filter: brightness(0) invert(1);
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes cardFloat {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .error-code {
+            font-family: 'Outfit', sans-serif;
+            font-size: 8rem;
+            font-weight: 800;
+            color: var(--teal);
+            line-height: 1;
+            margin-bottom: 8px;
+            animation: fadeIn 0.6s ease-out 0.2s both;
+            letter-spacing: -0.02em;
+        }
+
+        .error-label {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.5);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            animation: fadeIn 0.6s ease-out 0.3s both;
+        }
+
+        .notice-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            box-shadow:
+                0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                0 20px 40px -10px rgba(40, 52, 66, 0.2);
+            position: relative;
+            animation: cardFloat 0.8s ease-out 0.4s both;
+        }
+
+        .notice-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--teal), var(--teal-light));
+            border-radius: 0 0 4px 4px;
+        }
+
+        .roof-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 20px;
+            color: var(--teal);
+        }
+
+        .notice-card h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 12px;
+        }
+
+        .notice-card p {
+            color: #64748b;
+            font-size: 1.05rem;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .actions {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin-top: 28px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            border-radius: 10px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background: var(--teal);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--teal-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px -4px rgba(77, 190, 162, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--cream);
+            color: var(--dark);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(77, 190, 162, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .btn-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        footer {
+            background: var(--dark);
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 40px 20px 60px;
+            }
+
+            .logo {
+                max-width: 180px;
+                margin-bottom: 36px;
+            }
+
+            .error-code {
+                font-size: 5rem;
+            }
+
+            .notice-card {
+                padding: 30px 24px;
+            }
+
+            .notice-card h1 {
+                font-size: 1.4rem;
+            }
+
+            .actions {
+                flex-direction: column;
+            }
+
+            .btn {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="container">
+            <a href="/">
+                <svg class="logo" viewBox="0 0 776.14 124.19" xmlns="http://www.w3.org/2000/svg">
+                    <defs><style>.cls-1{fill:#4dbea2;}.cls-2{fill:#fff;}.cls-3{fill:#fff;}</style></defs>
+                    <path class="cls-1" d="M57.17,23.51V16.57h13v17l13.16,8.85A62,62,0,0,0-40.37,51.69c.15,2,.4,3.93.73,5.88l74-51.1Z" transform="translate(40.54 14.96)"/>
+                    <path class="cls-1" d="M-35.85,71A62,62,0,0,0,83.39,48.52L34.69,20Z" transform="translate(40.54 14.96)"/>
+                    <rect class="cls-2" x="75.07" y="70.67" width="5.86" height="5.86"/>
+                    <path class="cls-2" d="M40.6,61.78H34.32V55.49H40.6Zm-5.86-.42h5.44V55.92H34.74Z" transform="translate(40.54 14.96)"/>
+                    <rect class="cls-2" x="65.76" y="61.35" width="5.86" height="5.86"/>
+                    <path class="cls-2" d="M31.3,52.48H25V46.19H31.3ZM25.43,52h5.44V46.6H25.43Z" transform="translate(40.54 14.96)"/>
+                    <rect class="cls-2" x="75.07" y="61.35" width="5.86" height="5.86"/>
+                    <path class="cls-2" d="M40.6,52.48H34.32V46.19H40.6ZM34.74,52h5.44V46.6H34.74Z" transform="translate(40.54 14.96)"/>
+                    <path class="cls-2" d="M21.12,65.6l.08-23.36,23.3.08-.07,23.23Zm.66-.58h22V43h-22Z" transform="translate(40.54 14.96)"/>
+                    <path class="cls-2" d="M44.64,65.81H20.92L21,42.1l23.72.07Zm-23.31-.43h22.9V42.58L21.41,42.5Zm22.73-.15H21.55V42.73H44.06ZM22,64.8H43.62V43.16H22Z" transform="translate(40.54 14.96)"/>
+                    <rect class="cls-2" x="65.76" y="70.67" width="5.86" height="5.86"/>
+                    <path class="cls-2" d="M31.3,61.78H25V55.49H31.3Zm-5.87-.42h5.44V55.92H25.43Z" transform="translate(40.54 14.96)"/>
+                    <path class="cls-3" d="M150.58,26.35v2.77c0,8-2.43,13.05-7.85,15.59,6.52,2.54,9.07,8.41,9.07,16.59v6.3c0,12-6.31,18.36-18.47,18.36H114.2V8.54h18.35C145.16,8.54,150.58,14.42,150.58,26.35ZM126.34,19.6V40.06h4.76c4.53,0,7.3-2,7.3-8.18V27.57c0-5.53-1.88-8-6.2-8Zm0,31.52V74.9h7c4.09,0,6.3-1.88,6.3-7.63V60.53c0-7.19-2.32-9.41-7.85-9.41Z" transform="translate(40.54 14.96)"/>
+                    <path class="cls-3" d="M198.47,86H186.19l-2.1-14H169.16l-2.1,14H155.89L168.27,8.54h17.81ZM170.71,61.42h11.72l-5.86-39.15Z" transform="translate(40.54 14.96)"/>
+                    <path class="cls-3" d="M229.54,86c-.66-2-1.1-3.21-1.1-9.51V64.29c0-7.19-2.44-9.85-8-9.85h-4.2V86H204.11V8.54h18.35c12.61,0,18,5.87,18,17.81v6.07c0,8-2.54,13.16-8,15.71,6.08,2.54,8.07,8.4,8.07,16.48v12c0,3.76.11,6.53,1.33,9.4ZM216.27,19.6V43.42H221c4.53,0,7.3-2,7.3-8.18V27.57c0-5.53-1.88-8-6.2-8Z" transform="translate(40.54 14.96)"/>
+                    <path class="cls-3" d="M245,8.54h37.61V19.6H269.91V86H257.74V19.6H245Z" transform="translate(40.54 14.96)"/>
+                    <path class="cls-3" d="M287.93,8.54H300.1V74.9h20V86H287.93Z" transform="translate(40.54 14.96)"/>
+                    <path class="cls-3" d="M337.59,41.17h16.75V52.23h-16.7V74.9h21V86H325.42V8.54H358.6V19.6h-21Z" transform="translate(40.54 14.96)"/>
+                    <path class="cls-3" d="M362.58,8.54h37.61V19.6H387.47V86H375.34V19.6H362.58Z" transform="translate(40.54 14.96)"/>
+                    <path class="cls-3" d="M402,8.54h37.6V19.6H426.84V86H414.67V19.6H402Z" transform="translate(40.54 14.96)"/>
+                    <path class="cls-3" d="M487.44,86c-.66-2-1.11-3.21-1.11-9.51V64.29c0-7.19-2.43-9.85-8-9.85h-4.2V86H462V8.54h18.34c12.61,0,18,5.87,18,17.81v6.07c0,8-2.54,13.16-8,15.71,6.08,2.54,8.07,8.4,8.07,16.48v12c0,3.76.11,6.53,1.33,9.4ZM474.17,19.6V43.42h4.75c4.54,0,7.3-2,7.3-8.18V27.57c0-5.53-1.88-8-6.19-8Z" transform="translate(40.54 14.96)"/>
+                    <path class="cls-3" d="M505.46,27.12c0-12.38,6.53-19.46,18.47-19.46s18.47,7.08,18.47,19.46v40.3c0,12.39-6.52,19.47-18.47,19.47s-18.47-7.12-18.47-19.47Zm12.17,41c0,5.53,2.43,7.63,6.3,7.63s6.31-2.1,6.31-7.63V26.35c0-5.53-2.43-7.63-6.31-7.63s-6.3,2.1-6.3,7.63Z" transform="translate(40.54 14.96)"/>
+                    <path class="cls-3" d="M549.26,27.12c0-12.38,6.52-19.46,18.47-19.46s18.47,7.08,18.47,19.46v40.3c0,12.39-6.53,19.47-18.47,19.47s-18.47-7.12-18.47-19.47Zm12.16,41c0,5.53,2.44,7.63,6.31,7.63s6.3-2.1,6.3-7.63V26.35c0-5.53-2.43-7.63-6.3-7.63s-6.31,2.1-6.31,7.63Z" transform="translate(40.54 14.96)"/>
+                    <path class="cls-3" d="M606.21,42.94h15.71V54H606.21V86H594.05V8.54h32.18V19.6h-20Z" transform="translate(40.54 14.96)"/>
+                    <path class="cls-3" d="M632.09,8.54h12.17V86H632.09Z" transform="translate(40.54 14.96)"/>
+                    <path class="cls-3" d="M663.94,29.89V86h-11V8.54H668.2l12.5,46.34V8.54h10.84V86H679Z" transform="translate(40.54 14.96)"/>
+                    <path class="cls-3" d="M718.57,42.83h17V67.42c0,12.39-6.19,19.47-18.13,19.47s-18.1-7.12-18.1-19.47V27.12c0-12.38,6.18-19.46,18.13-19.46s18.13,7.08,18.13,19.46v7.53H724.1v-8.3c0-5.53-2.43-7.63-6.3-7.63s-6.31,2.1-6.31,7.63V68.16c0,5.53,2.44,7.52,6.31,7.52s6.3-2,6.3-7.52V53.89h-5.53Z" transform="translate(40.54 14.96)"/>
+                </svg>
+            </a>
+
+            <div class="error-code">404</div>
+            <p class="error-label">Page Not Found</p>
+
+            <div class="notice-card">
+                <svg class="roof-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32 8L4 32h8v20h16V40h8v12h16V32h8L32 8z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M24 52V40h16v12" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <line x1="20" y1="22" x2="26" y2="28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                    <line x1="26" y1="22" x2="20" y2="28" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+                <h1>This Page Has Gone Missing</h1>
+                <p>Looks like this page blew off in a storm. Head back to our main page or give us a call — we're here to help with your roofing needs.</p>
+                <div class="actions">
+                    <a href="/" class="btn btn-primary">
+                        <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1h-2z"/>
+                        </svg>
+                        Back to Home
+                    </a>
+                    <a href="tel:+12082864187" class="btn btn-secondary">
+                        <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                        </svg>
+                        (208) 286-4187
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Bartlett Roofing. All rights reserved.</p>
+    </footer>
+</body>
+</html>

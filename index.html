@@ -449,11 +449,31 @@
             font-size: 0.85rem;
         }
 
-        .licenses-text {
+        .licenses {
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .licenses-title {
             color: rgba(255, 255, 255, 0.5);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+        }
+
+        .licenses-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px 16px;
+            color: rgba(255, 255, 255, 0.4);
             font-size: 0.75rem;
-            margin-top: 20px;
-            line-height: 1.8;
+        }
+
+        .licenses-list span {
+            white-space: nowrap;
         }
 
         @media (max-width: 768px) {
@@ -735,9 +755,18 @@
             </svg>
             <p>&copy; 2026 Bartlett Roofing. All rights reserved.</p>
             <p class="service-areas">Serving Arizona, California, Georgia, Idaho, Montana, Oregon, Utah, and Washington</p>
-            <p class="licenses-text">
-                <strong>Contractor Licenses:</strong> Idaho RCE-40938 | Utah #14405471-5501 | Oregon ROC 220922 | California CSLB 1116914 | Arizona ROC 323417 | Montana 257075 | Washington BARTLHR793LC
-            </p>
+            <div class="licenses">
+                <p class="licenses-title">Contractor Licenses</p>
+                <div class="licenses-list">
+                    <span>Idaho RCE-40938</span>
+                    <span>Utah #14405471-5501</span>
+                    <span>Oregon ROC 220922</span>
+                    <span>California CSLB 1116914</span>
+                    <span>Arizona ROC 323417</span>
+                    <span>Montana 257075</span>
+                    <span>Washington BARTLHR793LC</span>
+                </div>
+            </div>
         </div>
     </footer>
 </body>
